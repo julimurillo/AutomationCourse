@@ -1,0 +1,16 @@
+package com.qvision.calculator;
+
+/**
+ * Hello world!
+ *
+ */
+public class Calculator 
+{
+   public void sumar (int a, int b) {
+	   
+	   int res=0;
+	   
+	   res= a + b;
+	   	   
+   }
+}

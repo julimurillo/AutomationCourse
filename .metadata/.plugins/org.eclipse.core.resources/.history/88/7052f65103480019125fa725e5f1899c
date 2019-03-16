@@ -1,0 +1,16 @@
+import org.openqa.selenium.WebDriver;
+
+public class Login {
+
+	WebDriver myDriver;
+
+	public Login(WebDriver driver) {
+
+		this.myDriver = driver;
+	}
+	
+	public void loginApp(String user, String passwd) {
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package AutomationCourse.MavenAutomation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Inicio de automatización" );
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://developsupport.com/qIntranet/login/index.php");
+        
+        //----------------------------------------------------------------
+        
+        
+        WebElement txtName;
+        WebElement passwd;
+        WebElement btnEntrar;
+        
+        txtName=driver.findElement(By.id("username"));
+        txtName.sendKeys("jmurillo");
+        
+               
+    }
+}

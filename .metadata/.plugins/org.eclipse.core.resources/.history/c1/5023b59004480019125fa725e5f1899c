@@ -1,0 +1,27 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Login {
+
+	WebDriver myDriver;
+	WebElement txtName;
+	WebElement txtPasswd;
+	WebElement btnLogin;
+	WebElement message;
+
+	public Login(WebDriver driver) {
+
+		this.myDriver = driver;
+	}
+	
+	public void loginApp(String user, String passwd) {
+		
+	}
+	
+    public void validateLogin() {
+		
+	}
+	
+	
+
+}

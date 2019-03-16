@@ -1,0 +1,17 @@
+package AutomationCourse.MavenAutomation;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Inicio de automatización" );
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        WebDriverriver driver = new ChromeDriver();
+    }
+}
