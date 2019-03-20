@@ -48,12 +48,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="LoginFacebook.LoginFace"/>
 			<item value="MavenJUnit.MavenJunit"/>
 		</list>
 		<list key="groupId">
+			<item value="LoginFacebook"/>
 			<item value="MavenJUnit"/>
 		</list>
 		<list key="artifactId">
+			<item value="LoginFace"/>
 			<item value="MavenJunit"/>
 		</list>
 		<list key="projectNameTemplate">
