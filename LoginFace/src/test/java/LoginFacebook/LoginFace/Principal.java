@@ -46,7 +46,7 @@ public class Principal {
 	}
 
 	@Test
-	public void test() {
+	public void testLoginTrue() {
 		Login pageLogin = new Login(driver);
 		Validacion validate = new Validacion(driver);
 		pageLogin.loginApp(info.get(0), info.get(1));
@@ -54,7 +54,7 @@ public class Principal {
 	}
 
 	@Test
-	public void test2() {
+	public void testLoginFalse() {
 		Login pageLogin = new Login(driver);
 		Validacion validate = new Validacion(driver);
 		pageLogin.loginApp(info.get(2), info.get(3));
