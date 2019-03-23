@@ -53,13 +53,13 @@ public class Principal {
 		Assert.assertTrue(validate.validateLoginTrue());
 	}
 
-	@Test
+/*	@Test
 	public void testLoginFalse() {
 		Login pageLogin = new Login(driver);
 		Validacion validate = new Validacion(driver);
 		pageLogin.loginApp(info.get(2), info.get(3));
 		Assert.assertTrue(validate.validateLoginFalse());
-	}
+	}*/
 
 	@After
 	public void close() {
