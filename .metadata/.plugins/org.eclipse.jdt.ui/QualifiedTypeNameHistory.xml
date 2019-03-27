@@ -6,16 +6,22 @@
 <fullyQualifiedTypeName name="org.junit.After"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="java.sql.Driver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
+<fullyQualifiedTypeName name="com.qvision.pagefactory.page.RegisterPage"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 </qualifiedTypeNameHistroy>

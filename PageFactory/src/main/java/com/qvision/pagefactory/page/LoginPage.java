@@ -15,6 +15,9 @@ public class LoginPage {
   @FindBy(xpath="/html/body/center/div/form/table/tbody/tr[3]/td[2]/input")
   WebElement btnLogin;
   
+  @FindBy(xpath="/html/body/center/div/a")
+  WebElement Register;
+  
   public void iniciarSesion(String usuario, String password) {
 	  
 	  txtUsuario.sendKeys(usuario);
@@ -22,5 +25,10 @@ public class LoginPage {
 	  btnLogin.click();
   }
 	
+  
+  public void Registrarse() {
+	  
+	  Register.click();
+  }
 
 }
