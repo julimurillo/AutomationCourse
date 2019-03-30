@@ -31,10 +31,10 @@ public class RegisterPage {
 	WebElement State;
 	@FindBy(xpath = "/html/body/center/div/form/input[1]")
 	WebElement terms;
-	@FindBy(xpath = "/html/body/center/div/form/input[2]")
+	@FindBy(xpath = "/html/body/center/div/form/input")
 	WebElement boton;
 
-	public void registro(String user, String pass, String addr, String Badd, String state, String gen) {
+	public void registro(String user, String pass, String addr, String Badd, String state, String gen,String select) {
 
 		Select dropdown = new Select(State);
 
@@ -46,7 +46,7 @@ public class RegisterPage {
 		BAddr.sendKeys(Badd);
 		dropdown.selectByVisibleText(state);
 		terms.click();
-		boton.click();
+		button(select);
 
 	}
 
@@ -76,18 +76,21 @@ public class RegisterPage {
 		}
 	}
 
-	/*
-	 * public void button(String selec) {
-	 * 
-	 * List<WebElement>btn =
-	 * boton.findElements(By.xpath("//input[@type='button']"));
-	 * 
-	 * for(WebElement boton : btn) {
-	 * 
-	 * if(boton.getAttribute("value").contains(selec)){ boton.click(); } }
-	 * 
-	 * 
-	 * }
-	 */
+	public void button(String selec) {
+
+		try {
+			List<WebElement> btn = boton.findElements(By.xpath("//input[@type='button']"));
+
+			for (WebElement boton : btn) {
+
+				if (boton.getAttribute("value").contains(selec)) {
+					boton.click();
+				}
+			}
+
+		} catch (Exception e) {
+
+		}
+	}
 
 }

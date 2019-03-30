@@ -36,11 +36,11 @@ public class RegisterTest {
 
 		try {
 			pageLogin.Registrarse();
-			pageRegis.registro("juli", "juliM", "addr", "Badd", "Tamil Nadu", "F");
+			pageRegis.registro("juli", "juliM", "addr", "Badd", "Tamil Nadu", "F","Regi");
 			String texto = pageRegis.checkAlert(driver);
 			assertEquals("Registered Successfully", texto);
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 
 	}
