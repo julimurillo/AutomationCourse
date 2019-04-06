@@ -6,16 +6,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 
 import net.serenitybdd.core.annotations.findby.By;
 
@@ -33,12 +32,11 @@ public class ResultsPage extends PageObject {
 	@FindBy(xpath = "/html/body/div[8]/div[2]/h1")
 	WebElement lblValidate;
 
-	@FindBy(className = "text-center ee-global-spinner-wrapper js-spinner")
-	WebElementFacade div;
-
 	WebElement txtTituloDeOferta;
 	WebElement txtEmpresa;
 	WebElement txtFecha;
+
+
 
 	FileWriter fichero = null;
 	PrintWriter pw = null;
@@ -58,18 +56,16 @@ public class ResultsPage extends PageObject {
 	}
 
 	public void filters() {
-
+		
+		waitFor(Salary).isClickable();
+		Salary.click();
 		try {
-			waitFor(Salary).isClickable();
-			Salary.click();
-			WebDriverWait wait = new WebDriverWait((WebDriver) getDriver(), 10);
-			wait.until(div.waitUntilNotVisible());
+		
+			Thread.sleep(10);
 			publishDate.click();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.getMessage();
 		}
-
 	}
 
 	public void readOfferts() throws IOException {
@@ -84,10 +80,10 @@ public class ResultsPage extends PageObject {
 				txtEmpresa = find(By.xpath(
 						"/html/body/div[8]/div[4]/div[1]/div[3]/div[" + i + "]/div[1]/ul/li[2]/h3/span[2]/span"));
 				String txtEmpresas = txtEmpresa.getText();
-				txtFecha = find(By.xpath(
-						"/html/body/div[8]/div[4]/div[1]/div[3]/div["+i+"]/div[1]/ul/li[3]/span[3]"));
+				txtFecha = find(
+						By.xpath("/html/body/div[8]/div[4]/div[1]/div[3]/div[" + i + "]/div[1]/ul/li[3]/span[3]"));
 				String txtFechas = txtFecha.getText();
-				pw.println(txtOferta + "\n" + txtEmpresas + txtFechas+ "\n" + "**********************************");
+				pw.println(txtOferta + "\n" + txtEmpresas + txtFechas + "\n" + "**********************************");
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println(e);

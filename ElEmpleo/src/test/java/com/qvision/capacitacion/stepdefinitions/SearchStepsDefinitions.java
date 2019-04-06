@@ -32,9 +32,10 @@ public class SearchStepsDefinitions {
 
 	@Then("^I should only see items related to contador")
 	public void iShouldOnlySeeItemsRelatedToContador() {
+		assertTrue(stepPrincipal.validate());
 		stepPrincipal.filters();	
 		stepPrincipal.screenshot();
-		assertTrue(stepPrincipal.validate());
+		
 	}
 	
 	@Then("^save this in a \\.txt file$")

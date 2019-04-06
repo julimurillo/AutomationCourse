@@ -2,36 +2,9 @@
 <testsuite name="com.qvision.capacitacion.runners.SearchRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="juli" time="0.0">
   <properties/>
   <system-out><![CDATA[
-?[31mFailed scenarios:?[0m
-?[31msrc/test/resources/features/Search.feature:4 ?[0m# Search Successful
-
-1 Scenarios (?[31m1 failed?[0m)
-4 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m2 passed?[0m)
-1m6,922s
-
-org.openqa.selenium.NoSuchElementException: Timed out after 20 seconds. Element not found
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JULI', ip: '192.168.0.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:172)
-	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:124)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy25.getText(Unknown Source)
-	at com.qvision.capacitacion.pages.ResultsPage.validate(ResultsPage.java:48)
-	at com.qvision.capacitacion.steps.SearchSteps.validate(SearchSteps.java:42)
-	at com.qvision.capacitacion.steps.SearchSteps$$EnhancerByCGLIB$$dd82bc75.CGLIB$validate$2(<generated>)
-	at com.qvision.capacitacion.steps.SearchSteps$$EnhancerByCGLIB$$dd82bc75$$FastClassByCGLIB$$f3ebd10c.invoke(<generated>)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:478)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:463)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:438)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:179)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:166)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:72)
-	at com.qvision.capacitacion.steps.SearchSteps$$EnhancerByCGLIB$$dd82bc75.validate(<generated>)
-	at com.qvision.capacitacion.stepdefinitions.SearchStepsDefinitions.iShouldOnlySeeItemsRelatedToContador(SearchStepsDefinitions.java:37)
-	at ?.I should only see items related to contador(src/test/resources/features/Search.feature:7)
+1 Scenarios (?[32m1 passed?[0m)
+4 Steps (?[32m4 passed?[0m)
+0m28,922s
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
