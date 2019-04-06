@@ -1,8 +1,6 @@
 package com.qvision.pagefactory.page;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -22,7 +20,8 @@ public class RegisterPage {
 	@FindBy(xpath = "//*[@id=\"pid2\"]")
 	WebElement Pass2;
 	@FindBy(name = "gender")
-	WebElement Gender;
+	List<WebElement> Gender;
+	//WebElement Gender;
 	@FindBy(id = "taid")
 	WebElement Addr;
 	@FindBy(id = "btaid")
@@ -34,7 +33,7 @@ public class RegisterPage {
 	@FindBy(xpath = "/html/body/center/div/form/input")
 	WebElement boton;
 
-	public void registro(String user, String pass, String addr, String Badd, String state, String gen,String select) {
+	public void registro(String user, String pass, String addr, String Badd, String state, String gen, String select) {
 
 		Select dropdown = new Select(State);
 
@@ -66,14 +65,22 @@ public class RegisterPage {
 
 	public void gender(String gen) {
 
-		List<WebElement> radios = Gender.findElements(By.xpath("//input[@type ='radio']"));
+		//List<WebElement> radios = Gender.findElements(By.xpath("//input[@type ='radio']"));
+		
+		try {
+			
+			for (WebElement Gender : Gender) {
 
-		for (WebElement Gender : radios) {
-
-			if (Gender.getAttribute("value").contains(gen)) {
-				Gender.click();
+				if (Gender.getAttribute("value").contains(gen)) {
+					Gender.click();
+				}
 			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
+
+		
 	}
 
 	public void button(String selec) {

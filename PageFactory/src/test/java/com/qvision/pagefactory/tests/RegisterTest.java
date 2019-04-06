@@ -2,16 +2,12 @@ package com.qvision.pagefactory.tests;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qvision.pagefactory.page.LoginPage;
 import com.qvision.pagefactory.page.RegisterPage;
@@ -36,11 +32,10 @@ public class RegisterTest {
 
 		try {
 			pageLogin.Registrarse();
-			pageRegis.registro("juli", "juliM", "addr", "Badd", "Tamil Nadu", "F","Regi");
-			String texto = pageRegis.checkAlert(driver);
-			assertEquals("Registered Successfully", texto);
+			pageRegis.registro("juli", "juliM", "addr", "Badd", "Tamil Nadu", "M", "Can");
+			assertEquals("Registered Successfully", pageRegis.checkAlert(driver));
 		} catch (Exception e) {
-			
+
 		}
 
 	}
